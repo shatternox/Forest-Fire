@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  forest-fire-api:
+    build: ./forest-fire-api
+    ports:
+      - "17792:8000"
+  forest-fire-frontend:
+    build: ./forest-fire-frontend
+    ports:
+      - "17793:3000"
