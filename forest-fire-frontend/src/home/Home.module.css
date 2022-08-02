@@ -1,0 +1,22 @@
+.video {
+  padding: 20px;
+}
+
+.p {
+  padding: 0 100px;
+  padding-bottom: 10px;
+  text-align: justify;
+  color: wheat;
+  font-weight: bold;
+}
+
+.marquee {
+  margin-top: 20px;
+  color: wheat;
+  font-weight: bold;
+}
+
+.a {
+  text-decoration: none;
+  color: red;
+}

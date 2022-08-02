@@ -1,0 +1,28 @@
+.container{
+    color: #FEB139;
+}
+
+.no_article{
+    background-color: #293462;
+    text-align: center;
+    color: #FEB139;
+    font-size: 100px;
+    height: 100%;
+}
+
+.img{
+    border-radius: 20px;
+}
+
+.comment{
+    margin-bottom: 20px;
+}
+
+.profilepic{
+    border-radius: 100%;
+    width: 100px;
+    margin-right: 20px;
+    height: 100px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}

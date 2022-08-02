@@ -1,0 +1,22 @@
+.card{
+    background-color: #D61C4E;
+    color: #FEB139;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.text_side{
+    width: 50%;
+}
+
+.img_side{
+    width: 20%;
+}
+
+.a{
+    color: #FEB139;
+}
+
+.h2{
+    padding-right: 25px;
+}
