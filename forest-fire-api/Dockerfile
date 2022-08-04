@@ -14,6 +14,7 @@ WORKDIR /forest-fire-api
 
 COPY ./web/api.php ./routes/api.php
 COPY ./web/web.php ./routes/web.php
+COPY ./web/cors.php ./config/cors.php
 COPY ./flag /
 
 # Lock the ignition version
