@@ -1,4 +1,4 @@
-const baseUrl = "http://0.0.0.0:8000";
+const baseUrl = "http://forestfire.user.cloudjkt01.com:17792";
 const loginPath = "/api/v1/login"
 const donationPath = "/api/v1/donation"
 const ticketPath = "/api/v1/ticket"
