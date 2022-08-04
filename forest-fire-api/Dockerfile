@@ -10,7 +10,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 # Create a laravel project
 RUN composer create-project --prefer-dist laravel/laravel /forest-fire-api "8.4.2"
 
-WORKDIR /myapp
+WORKDIR /forest-fire-api
 
 COPY ./web/api.php ./routes/api.php
 COPY ./web/web.php ./routes/web.php
@@ -18,5 +18,7 @@ COPY ./flag /
 
 # Lock the ignition version
 RUN composer require --dev facade/ignition==2.5.1
+
+CMD ["cd", "/forest-fire-api"]
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0"]

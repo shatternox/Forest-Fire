@@ -1,4 +1,4 @@
-const baseUrl = "http://forest-fire-api:8000";
+const baseUrl = "http://0.0.0.0:17792";
 const loginPath = "/api/v1/login"
 const donationPath = "/api/v1/donation"
 const ticketPath = "/api/v1/ticket"
