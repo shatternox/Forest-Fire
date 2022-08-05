@@ -3,7 +3,7 @@ services:
   forest-fire-api:
     build: ./forest-fire-api
     ports:
-      - "17792:8000"
+      - "23891:8000"
   forest-fire-frontend:
     build: ./forest-fire-frontend
     ports:
