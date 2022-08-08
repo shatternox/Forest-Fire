@@ -1,4 +1,4 @@
-FROM php:7.3.31
+FROM php
 
 # Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
