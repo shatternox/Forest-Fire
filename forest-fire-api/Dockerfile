@@ -21,7 +21,7 @@ COPY ./flag /
 RUN composer require --dev facade/ignition==2.5.1
 
 RUN chmod -R 705 /forest-fire-api
-
+RUN chmod 777 /forest-fire-api/storage/logs/laravel.log
 RUN chmod 704 /flag
 
 
