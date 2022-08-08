@@ -1,9 +1,5 @@
 FROM php:7.3.31
 
-RUN useradd -ms /bin/bash player_ctf
-
-USER player_ctf
-
 # Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
@@ -13,17 +9,30 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 
 WORKDIR /forest-fire-api
 
-CMD ["composer", "install"]
+COPY ./web/api.php ./routes/api.php
+COPY ./web/web.php ./routes/web.php
+COPY ./web/cors.php ./config/cors.php
+COPY ./flag /
 
+# Lock the ignition version
 RUN composer require --dev facade/ignition==2.5.1
+
+RUN chmod -R 705 /forest-fire-api
+
+RUN chmod 704 /flag
+
+
+RUN useradd -ms /bin/bash player_ctf
+
+USER player_ctf
+
+
+CMD ["cd", "/forest-fire-api"]
 
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0"]
 
-USER root
 
-RUN chmod -R 704 /forest-fire-api
 
-RUN chmod 704 /flag
 
 
 
