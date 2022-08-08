@@ -1,4 +1,4 @@
-FROM php:7.3.31-alpine3.14
+FROM php:7.3.31
 
 RUN useradd -ms /bin/bash player_ctf
 
