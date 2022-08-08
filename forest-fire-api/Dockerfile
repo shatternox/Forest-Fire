@@ -22,7 +22,7 @@ RUN chmod -R 705 /forest-fire-api
 RUN chmod 704 /flag
 
 
-RUN adduser player_ctf
+RUN adduser player_ctf --disabled-password
 
 USER player_ctf
 
