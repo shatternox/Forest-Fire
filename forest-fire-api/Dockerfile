@@ -1,4 +1,4 @@
-FROM php-cli
+FROM php:7.3.31-alpine3.14
 
 # Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
@@ -22,7 +22,7 @@ RUN chmod -R 705 /forest-fire-api
 RUN chmod 704 /flag
 
 
-RUN useradd -ms /bin/bash player_ctf
+RUN adduser player_ctf
 
 USER player_ctf
 
