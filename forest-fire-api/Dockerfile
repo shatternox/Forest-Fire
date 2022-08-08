@@ -7,6 +7,9 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && mv composer.phar /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer
 
+# Create a laravel project
+RUN composer create-project --prefer-dist laravel/laravel /forest-fire-api "8.4.2"
+
 WORKDIR /forest-fire-api
 
 COPY ./web/api.php ./routes/api.php
@@ -18,8 +21,6 @@ COPY ./flag /
 RUN composer require --dev facade/ignition==2.5.1
 
 RUN chmod -R 705 /forest-fire-api
-
-RUN chmod 777 /forest-fire-api/artisan
 
 RUN chmod 704 /flag
 
