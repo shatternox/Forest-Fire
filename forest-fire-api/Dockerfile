@@ -1,4 +1,4 @@
-FROM php
+FROM php-cli
 
 # Install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
